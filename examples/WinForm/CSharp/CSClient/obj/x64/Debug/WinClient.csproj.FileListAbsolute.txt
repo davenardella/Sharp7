@@ -1,0 +1,8 @@
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\CSClient.exe
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\CSClient.pdb
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\bin\x64\CSClient.exe
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\bin\x64\CSClient.pdb
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\WinClient.csprojResolveAssemblyReference.cache
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\CSClient.MainForm.resources
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\CSClient.Properties.Resources.resources
+C:\sharp7-full-1.0.0\examples\WinForm\CSharp\CSClient\obj\x64\Debug\WinClient.csproj.GenerateResource.Cache

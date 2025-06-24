@@ -1,0 +1,5 @@
+C:\Snap7\sharp7-full-1.0.0\examples\WinForm\VB\Sharp7.net\bin\Debug\Sharp7.net.dll
+C:\Snap7\sharp7-full-1.0.0\examples\WinForm\VB\Sharp7.net\bin\Debug\Sharp7.net.pdb
+C:\Snap7\sharp7-full-1.0.0\examples\WinForm\VB\Sharp7.net\obj\Debug\Sharp7.net.csprojResolveAssemblyReference.cache
+C:\Snap7\sharp7-full-1.0.0\examples\WinForm\VB\Sharp7.net\obj\Debug\Sharp7.net.dll
+C:\Snap7\sharp7-full-1.0.0\examples\WinForm\VB\Sharp7.net\obj\Debug\Sharp7.net.pdb
