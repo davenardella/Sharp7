@@ -2785,8 +2785,8 @@ namespace Sharp7
 					S7.SetWordAt(S7DataItem, 2, (ushort)ItemDataSize);
 
 				Marshal.Copy(Items[c].pData, S7DataItem, 4, ItemDataSize);
-				if (ItemDataSize % 2 != 0)
-				{
+				if ((ItemDataSize % 2 != 0) && (c < ItemsCount - 1))
+                {
 					S7DataItem[ItemDataSize + 4] = 0x00;
 					ItemDataSize++;
 				}
