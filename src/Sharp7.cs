@@ -1,27 +1,29 @@
 ﻿/*=============================================================================|
-|  PROJECT Sharp7                                                        1.1.1 |
+| PROJECT Sharp7                                                         2.0.0 |
 |==============================================================================|
-|  Copyright (C) 2016, 2025 Davide Nardella                                    |
-|  All rights reserved.                                                        |
+| Copyright (C) 2016, 2026 Davide Nardella                                     |
+| All rights reserved.                                                         |
 |==============================================================================|
-|  Sharp7 is free software: you can redistribute it and/or modify              |
-|  it under the terms of the Lesser GNU General Public License as published by |
-|  the Free Software Foundation, either version 3 of the License, or           |
-|  (at your option) any later version.                                         |
+| Sharp7 is free software:                                                     |
+| From 2.0.0 you can redistribute it and/or modify it under the terms of the   |
+| MIT License                                                                  |
+|------------------------------------------------------------------------------|
+| Permission is hereby granted, free of charge, to any person obtaining a copy |
+| of this software and associated documentation files (the "Software"), to deal|
+| in the Software without restriction, including without limitation the rights |
+| to use, copy, modify, merge, publish, distribute, sublicense, and/or sell    |
+| copies of the Software, and to permit persons to whom the Software is        |
+| furnished to do so, subject to the following conditions:                     |
+| The above copyright notice and this permission notice shall be included in   |
+| all copies or substantial portions of the Software.                          |
 |                                                                              |
-|  It means that you can distribute your commercial software which includes    |
-|  Sharp7 without the requirement to distribute the source code of your        |
-|  application and without the requirement that your application be itself     |
-|  distributed under LGPL.                                                     |
-|                                                                              |
-|  Sharp7 is distributed in the hope that it will be useful,                   |
-|  but WITHOUT ANY WARRANTY; without even the implied warranty of              |
-|  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               |
-|  Lesser GNU General Public License for more details.                         |
-|                                                                              |
-|  You should have received a copy of the GNU General Public License and a     |
-|  copy of Lesser GNU General Public License along with Sharp7.                |
-|  If not, see  http://www.gnu.org/licenses/                                   |
+| THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR   |
+| IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,     |
+| FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  |
+| AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER       |
+| LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,|
+| OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE|
+| SOFTWARE.                                                                    |
 |==============================================================================|
 History:
  * 1.0.0 2016/10/09 First Release
@@ -44,6 +46,11 @@ History:
  * ------------------------------------------------------------------------------
  * 1.1.1 2025/06/23 Repository change
  *                  Updated examples
+ * ------------------------------------------------------------------------------
+ * 1.1.2 2026/02/21 Fugfix in WriteMultiVars, WriteMultiDrvVars, WriteMultiNckVars, 
+ *                  (by MohamedGobran)
+ * ------------------------------------------------------------------------------
+ * 2.0.0 2026/02/21 License changed from LGPL-3.0 to MIT               
 */
 using System;
 using System.Runtime.InteropServices;
@@ -2785,7 +2792,7 @@ namespace Sharp7
 					S7.SetWordAt(S7DataItem, 2, (ushort)ItemDataSize);
 
 				Marshal.Copy(Items[c].pData, S7DataItem, 4, ItemDataSize);
-				if (ItemDataSize % 2 != 0)
+                if ((ItemDataSize % 2 != 0) && (c < ItemsCount - 1))
 				{
 					S7DataItem[ItemDataSize + 4] = 0x00;
 					ItemDataSize++;
@@ -4797,7 +4804,7 @@ namespace Sharp7
 
 				Marshal.Copy(Items[c].pData, S7DrvDataItem, 4, ItemDataSize);
 
-				if (ItemDataSize % 2 != 0)
+				if ((ItemDataSize % 2 != 0) && (c < ItemsCount - 1))
 				{
 					S7DrvDataItem[ItemDataSize + 4] = 0x00;
 					ItemDataSize++;
@@ -5225,7 +5232,7 @@ namespace Sharp7
 
 				Marshal.Copy(Items[c].pData, S7NckDataItem, 4, ItemDataSize);
 
-				if (ItemDataSize % 2 != 0)
+				if ((ItemDataSize % 2 != 0) && (c < ItemsCount - 1))
 				{
 					S7NckDataItem[ItemDataSize + 4] = 0x00;
 					ItemDataSize++;

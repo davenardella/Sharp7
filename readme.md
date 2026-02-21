@@ -20,3 +20,10 @@ Copy Sharp7.cs into your project folder, add Sharp7 in your project tree, write:
 
 and you are ready to communicate with Siemens PLCs, without any more hallucinations.
 
+---
+## License
+Copyright © 2016, 2026 Davide Nardella
+
+*(From version 2.0.0 onwards the license changed from LGPL-3.0 to MIT)*
+
+Distribuited under <a href="LICENSE" target="_blank">MIT License</a>. 
